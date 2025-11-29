@@ -1,18 +1,3 @@
-'''
-Author:     Divyansh Dewangan
-LinkedIn:   https://www.linkedin.com/in/divyansh-dewangan/
-
-Copyright (C) 2024 Divyansh Dewangan
-
-License:    GNU Affero General Public License
-            https://www.gnu.org/licenses/agpl-3.0.en.html
-            
-GitHub:     https://github.com/divyansh-dewangan/Auto_job_applier_linkedIn
-
-version:    24.12.29.12.30
-'''
-
-
 ###################################################### APPLICATION INPUTS ######################################################
 
 
