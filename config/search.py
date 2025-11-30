@@ -1,14 +1,12 @@
-###################################################### LINKEDIN SEARCH PREFERENCES ######################################################
 
 # These Sentences are Searched in LinkedIn
-# Enter your search terms inside '[ ]' with quotes ' "searching title" ' for each search followed by comma ', ' Eg: ["Software Engineer", "Software Developer", "Selenium Developer"]
-search_terms = ["Software Engineer", "Software Developer", "Python Developer", "Artificial Intelligence", "Frontend Developer", "Full Stack Developer", "Selenium Developer", "React Developer", "Java Developer", "Front End Developer", "Full Stack Development", "Web Developer", "Nodejs Developer", "AI Intern", "Gen AI", "Frontend", "Web Developer"]
-
-# Search location, this will be filled in "City, state, or zip code" search box. If left empty as "", tool will not fill it.
-search_location = "India"               # Some valid examples: "", "United States", "India", "Chicago, Illinois, United States", "90001, Los Angeles, California, United States", "Bengaluru, Karnataka, India", etc.
-
-# After how many number of applications in current search should the bot switch to next search? 
-switch_number = 50                 # Only numbers greater than 0... Don't put in quotes
+# Grouped search terms for better results
+search_terms = [
+    '("Software Engineer" OR "Software Developer" OR "Python Developer" OR "Java Developer" OR "Selenium Developer")',
+    '("Frontend Developer" OR "Front End Developer" OR Frontend OR "React Developer")',
+    '("Full Stack Developer" OR "Full Stack Development" OR "Web Developer" OR "Nodejs Developer")',
+    '("Artificial Intelligence" OR "AI Intern" OR "Gen AI")'
+]
 
 # Do you want to randomize the search order for search_terms?
 randomize_search_order = False     # True of False, Note: True or False are case-sensitive
@@ -84,26 +82,9 @@ did_masters = True                 # True or False, Note: True or False are case
 
 # Avoid applying to jobs if their required experience is above your current_experience. (Set value as -1 if you want to apply to all ignoring their required experience...)
 current_experience = 1             # Integers > -2 (Ex: -1, 0, 1, 2, 3, 4...)
-##
 
+# Search location, this will be filled in "City, state, or zip code" search box. If left empty as "", tool will not fill it.
+search_location = "India"               # Some valid examples: "", "United States", "India", "Chicago, Illinois, United States", "90001, Los Angeles, California, United States", "Bengaluru, Karnataka, India", etc.
 
-
-
-
-
-############################################################################################################
-'''
-THANK YOU for using my tool 😊! Wishing you the best in your job hunt 🙌🏻!
-
-Sharing is caring! If you found this tool helpful, please share it with your peers 🥺. Your support keeps this project alive.
-
-Support my work on <PATREON_LINK>. Together, we can help more job seekers.
-
-As an independent developer, I pour my heart and soul into creating tools like this, driven by the genuine desire to make a positive impact.
-
-Your support, whether through donations big or small or simply spreading the word, means the world to me and helps keep this project alive and thriving.
-
-Gratefully yours 🙏🏻,
-Sai Vignesh Golla
-'''
-############################################################################################################
+# After how many number of applications in current search should the bot switch to next search? 
+switch_number = 50                 # Only numbers greater than 0... Don't put in quotes

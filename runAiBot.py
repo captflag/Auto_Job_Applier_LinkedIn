@@ -983,14 +983,9 @@ def apply_to_jobs(search_terms: list[str]) -> None:
     print_lg(f"\nSession configured to run for approximately {session_duration/60:.2f} minutes.")
     current_city = current_city.strip()
 
+    # Search terms are already grouped in config/search.py
+    # Iterating through each group individually
     if randomize_search_order:  shuffle(search_terms)
-    
-    # Combine all search terms into a single query using OR
-    # This allows searching for all roles simultaneously
-    if len(search_terms) > 1:
-        combined_search = " OR ".join([f'"{term}"' for term in search_terms])
-        print_lg(f"Combined search query: {combined_search}")
-        search_terms = [combined_search]
 
     for searchTerm in search_terms:
         # Dynamic time filter logic
