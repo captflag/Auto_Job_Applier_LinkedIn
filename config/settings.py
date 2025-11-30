@@ -97,7 +97,7 @@ prioritize_low_applicant_jobs = True  # Prioritize jobs with fewer applicants
 max_applicants_for_priority = 50  # Jobs with fewer applicants get priority
 
 # Dynamic Time Filter Settings
-enable_dynamic_time_filter = False  # Keep strict r600 filter (10 minutes)
+enable_dynamic_time_filter = True  # Keep strict r600 filter (10 minutes)
 initial_time_filter = "r600"  # Start with 10 minutes
 fallback_filters = ["r3600", "r86400"]  # Fallback to 1 hour, then 24 hours
 min_jobs_threshold = 5  # Expand filter if fewer than this many jobs
