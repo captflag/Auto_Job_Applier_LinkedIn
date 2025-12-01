@@ -1,68 +1,150 @@
-# LinkedIn AI Auto Job Applier 🤖
-This is an web scraping bot that automates the process of job applications on LinkedIn. It searches for jobs relevant to you, answers all questions in application form, customizes your resume based on the collected job information, such as skills required, description, about company, etc. and applies to the job. Can apply 100+ jobs in less than 1 hour. 
+# LinkedIn Auto Job Applier - Enhanced Edition 🚀
 
+An intelligent web automation bot that streamlines your LinkedIn job search process. This enhanced version features advanced search capabilities, robust error handling, and improved application management.
+
+**Apply to 100+ relevant jobs in less than 1 hour!** 🔥
+
+## 🌟 Key Enhancements in This Version
+
+This fork includes significant improvements over the original:
+
+- ✅ **Grouped Search Terms** - Organize your job searches into targeted categories (Backend, Frontend, Full Stack, AI/ML)
+- ✅ **Dynamic Time Filters** - Intelligent filtering to optimize search results and avoid premature exits
+- ✅ **Enhanced Error Handling** - Robust error recovery and detailed logging for troubleshooting
+- ✅ **Recruiter Tracking** - Better tracking and logging of recruiter interactions
+- ✅ **Improved Search Logic** - Combined search functionality for more efficient job discovery
+- ✅ **Better Reliability** - Refined codebase with removed redundancies and improved stability
 
 ## 📽️ See it in Action
 [![Auto Job Applier demo video](https://github.com/GodsScion/Auto_job_applier_linkedIn/assets/100998531/429f7753-ebb0-499b-bc5e-5b4ee28c4f69)](https://youtu.be/gMbB1fWZDHw)
 Click on above image to watch the demo or use this link https://youtu.be/gMbB1fWZDHw
 
-
 ## ✨ Content
-- [Introduction](#linkedin-ai-auto-job-applier-)
+- [Introduction](#linkedin-auto-job-applier---enhanced-edition-)
+- [Key Enhancements](#-key-enhancements-in-this-version)
 - [Demo Video](#%EF%B8%8F-see-it-in-action)
 - [Index](#-content)
 - [Install](#%EF%B8%8F-how-to-install)
 - [Configure](#-how-to-configure)
-- [Contributor Guidelines](#‍-contributor-guidelines)
 - [Updates](%EF%B8%8F-major-updates-history)
 - [Disclaimer](#-disclaimer)
 - [Terms and Conditions](#%EF%B8%8F-terms-and-conditions)
 - [License](#%EF%B8%8F-license)
-- [Socials](#-socials)
-- [Support and Discussions](#-community-support-and-discussions)
 
 <br>
 
-## ⚙️ How to install
+## ⚙️ How to Install
 
 [![Auto Job Applier setup tutorial video](https://github.com/user-attachments/assets/9e876187-ed3e-4fbf-bd87-4acc145880a2)](https://youtu.be/f9rdz74e1lM?si=4fRBcte0nuvr6tEH)
 Click on above image to watch the tutorial for installation and configuration or use this link https://youtu.be/f9rdz74e1lM (Recommended to watch it in 2x speed)
 
-1. [Python 3.10](https://www.python.org/) or above. Visit https://www.python.org/downloads/ to download and install Python, or for windows you could visit Microsoft Store and search for "Python". **Please make sure Python is added to Path in System Environment Variables**.
-2. Install necessary [Undetected Chromedriver](https://pypi.org/project/undetected-chromedriver/), [PyAutoGUI](https://pypi.org/project/PyAutoGUI/) and [Setuptools](https://pypi.org/project/setuptools/) packages. After Python is installed, OPEN a console/terminal or shell, Use below command that uses the [pip](https://pip.pypa.io/en/stable) command-line tool to install these 3 package.
-  ```
-  pip install undetected-chromedriver pyautogui setuptools openai flask-cors flask
-  ```
-3. Download and install latest version of [Google Chrome](https://www.google.com/chrome) in it's default location, visit https://www.google.com/chrome to download it's installer.
-4. Clone the current git repo or download it as a zip file, url to the latest update https://github.com/GodsScion/Auto_job_applier_linkedIn.
-5. (Not needed if you set `stealth_mode = True` in `config/settings.py` ) Download and install the appropriate [Chrome Driver](https://googlechromelabs.github.io/chrome-for-testing/) for Google Chrome and paste it in the location Chrome was installed, visit https://googlechromelabs.github.io/chrome-for-testing/ to download.
-  <br> <br>
-  ***OR*** 
-  <br> <br>
-  If you are using Windows, click on `windows-setup.bat` available in the `/setup` folder, this will install the latest chromedriver automatically.
-6. If you have questions or need help setting it up or to talk in general, join the github server: https://discord.gg/fFp7uUzWCY
+### Prerequisites
+
+1. **Python 3.10+** - [Download Python](https://www.python.org/downloads/)
+   - Windows users can also get it from Microsoft Store
+   - ⚠️ **Important**: Make sure Python is added to your System Path
+
+2. **Google Chrome** - [Download Chrome](https://www.google.com/chrome)
+   - Install in the default location
+
+### Installation Steps
+
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/captflag/Auto_Job_Applier_LinkedIn.git
+   cd Auto_Job_Applier_LinkedIn
+   ```
+
+2. **Install required Python packages**
+   ```bash
+   pip install undetected-chromedriver pyautogui setuptools openai flask-cors flask
+   ```
+
+3. **Chrome Driver Setup** (Optional if using stealth mode)
+   - If `stealth_mode = True` in `config/settings.py`, this step is not needed
+   - Otherwise, download [Chrome Driver](https://googlechromelabs.github.io/chrome-for-testing/)
+   - **Windows users**: Simply run `windows-setup.bat` in the `/setup` folder for automatic installation
 
 [back to index](#-content)
 
 <br>
 
-## 🔧 How to configure
-1. Open `personals.py` file in `/config` folder and enter your details like name, phone number, address, etc. Whatever you want to fill in your applications.
-2. Open `questions.py` file in `/config` folder and enter your answers for application questions, configure wether you want the bot to pause before submission or pause if it can't answer unknown questions.
-3. Open `search.py` file in `/config` folder and enter your search preferences, job filters, configure the bot as per your needs (these settings decide which jobs to apply for or skip).
-4. Open `secrets.py` file in `/config` folder and enter your LinkedIn username, password to login and OpenAI API Key for generation of job tailored resumes and cover letters (This entire step is optional). If you do not provide username or password or leave them as default, it will login with saved profile in browser, if failed will ask you to login manually.
-5. Open `settings.py` file in `/config` folder to configure the bot settings like, keep screen awake, click intervals (click intervals are randomized to seem like human behavior), run in background, stealth mode (to avoid bot detection), etc. as per your needs.
-6. (Optional) Don't forget to add you default resume in the location you mentioned in `default_resume_path = "all resumes/default/resume.pdf"` given in `/config/questions.py`. If one is not provided, it will use your previous resume submitted in LinkedIn or (In Development) generate custom resume if OpenAI APT key is provided!
-7. Run `runAiBot.py` and see the magic happen.
-8. To run the Applied Jobs history UI, run `app.py` and open web browser on `http://localhost:5000`.
-8. If you have questions or need help setting it up or to talk in general, join the github server: https://discord.gg/fFp7uUzWCY
+## 🔧 How to Configure
+
+### Required Configuration
+
+1. **Personal Information** (`config/personals.py`)
+   - Enter your name, phone number, address, and other personal details
+   - This information will be used to auto-fill application forms
+
+2. **Application Questions** (`config/questions.py`)
+   - Configure your standard answers for common application questions
+   - Set whether to pause before submission
+   - Configure behavior for unknown questions
+
+3. **Search Preferences** (`config/search.py`) - ⭐ Enhanced in this version!
+   - Define your job search criteria using **grouped search terms**:
+     - Backend/Dev roles
+     - Frontend/UI positions  
+     - Full Stack opportunities
+     - AI/ML/GenAI positions
+   - Set job filters and preferences
+   - Configure dynamic time filters for optimal results
+
+4. **Secrets** (`config/secrets.py`) - Optional but recommended
+   - LinkedIn credentials (username & password)
+   - OpenAI API Key for AI-powered resume customization
+   - ⚠️ **Note**: This file is gitignored and won't be pushed to GitHub
+
+5. **Bot Settings** (`config/settings.py`)
+   - Configure stealth mode (recommended: `True`)
+   - Set click intervals and timing
+   - Enable/disable background running
+   - Adjust keep-awake settings
+
+6. **Resume** (Optional)
+   - Add your default resume to `all resumes/default/resume.pdf`
+   - If not provided, uses your previous LinkedIn resume
+
+### Running the Bot
+
+```bash
+# Run the job application bot
+python runAiBot.py
+
+# View applied jobs history (optional)
+python app.py
+# Then open http://localhost:5000 in your browser
+```
 
 [back to index](#-content)
 
 <br>
 
 
-## 🧑‍💻 Contributor Guidelines
+## 📊 Enhanced Features Details
+
+### Grouped Search Strategy
+This version implements an intelligent grouped search approach:
+- Searches are organized into specific job categories
+- Each group is processed independently for better targeting
+- Reduces search conflicts and improves result relevance
+
+### Dynamic Time Filtering  
+- Automatically adjusts time filters based on search results
+- Prevents premature exits when jobs are available
+- Optimizes search efficiency
+
+### Error Handling & Logging
+- Comprehensive error logging for troubleshooting
+- Recruiter interaction tracking
+- Detailed session summaries
+
+<br>
+
+## 🧑‍💻 Contributing
+
+Contributions are welcome! If you'd like to improve this fork:
 Thank you for your efforts and being a part of the community. All contributions are appreciated no matter how small or big. Once you contribute to the code base, your work will be remembered forever.
 
 NOTE: Only Pull request to `community-version` branch will be accepted. Any other requests will be declined by default, especially to main branch.
@@ -304,28 +386,17 @@ See [AGPLv3 LICENSE](LICENSE) for more info.
 
 <br>
 
-## 🐧 Socials
-- **LinkedIn** : https://www.linkedin.com/in/saivigneshgolla/
-- **Email**    : saivigneshgolla@outlook.com
-- **X/Twitter**: https://x.com/saivigneshgolla
-- **Discord**  : godsscion
+## 📬 Contact & Support
 
-
-## 🙌 Community Support and Discussions
-- **Discord Server** : https://discord.gg/fFp7uUzWCY
-alternate link: https://discord.gg/ykfDjRFB
-- **GitHub**
-    - [All Discussions](https://github.com/GodsScion/Auto_job_applier_linkedIn/discussions)
-    - [Announcements](https://github.com/GodsScion/Auto_job_applier_linkedIn/discussions/categories/announcements)
-    - [General](https://github.com/GodsScion/Auto_job_applier_linkedIn/discussions/categories/general)
-    - [Feature requests or Ideas](https://github.com/GodsScion/Auto_job_applier_linkedIn/discussions/categories/feature-requests-or-ideas)
-    - [Polls](https://github.com/GodsScion/Auto_job_applier_linkedIn/discussions/categories/polls)
-    - [Community Flex](https://github.com/GodsScion/Auto_job_applier_linkedIn/discussions/categories/community-flex)
-    - [Support Q&A](https://github.com/GodsScion/Auto_job_applier_linkedIn/discussions/categories/support-q-a)
-
-
-#### ℹ️ Version: 25.07.20.9.30 Community Alpha
+For questions, issues, or feature requests, please:
+- Open an issue on [GitHub](https://github.com/captflag/Auto_Job_Applier_LinkedIn/issues)
+- Check existing issues before creating a new one
 
 ---
 
-[back to the top](#linkedin-ai-auto-job-applier-)
+#### ℹ️ Version: Enhanced Edition v1.0 (2025)
+**Based on**: Community Alpha 25.07.20.9.30
+
+---
+
+[⬆ back to the top](#linkedin-auto-job-applier---enhanced-edition-)
