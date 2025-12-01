@@ -280,7 +280,14 @@ Please consider the following:
 
 ## ⚖️ License
 
+**Original Work:**  
 Copyright (C) 2024 Sai Vignesh Golla  <saivigneshgolla@outlook.com>
+
+**Modifications:**  
+Copyright (C) 2025 Divyansh (captflag)  
+- Implemented grouped search terms and dynamic time filter
+- Enhanced error handling and recruiter logging  
+- Combined search functionality improvements
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
